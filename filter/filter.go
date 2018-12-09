@@ -236,14 +236,15 @@ func HistogramEqualization(src image.Image) *image.Gray {
 	dst := clone.AsGray(src)
 	w, h := bounds.Dx(), bounds.Dy()
 	hist := histogram.GetGrayHistogram(src)
-	bins := make([]color.Gray, h*dst.Stride + w)
+	bins := make([]color.Gray, h * w)
 	for i := 0; i < h; i++ {
 		for j := 0; j < w; j++ {
 			bins[i*dst.Stride + j], _ = color.GrayModel.Convert(src.At(j, i)).(color.Gray)
 		}
 	}
-	bins = *utils.SortGray_(&bins, 0, len(hist.Y.Bins)-1)
-	var max uint8 = 255
+	utils.SortGray(bins, 0, len(bins)-1)
+	max := bins[len(bins)-1].Y
+	// var max uint8 = 255
 	log.Println(max)
 	cumulated := hist.Y.Cumulate()
 	fn := func(original uint8) uint8 {

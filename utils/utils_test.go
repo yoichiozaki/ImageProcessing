@@ -6,6 +6,37 @@ import (
 	"testing"
 )
 
+func TestQuickSortGray(t *testing.T) {
+	cases := []struct {
+		value    []color.Gray
+		expected []color.Gray
+	}{
+		{
+			value:    []color.Gray{{0}},
+			expected: []color.Gray{{0}},
+		},
+		{
+			value:    []color.Gray{{1}, {0}, {0}},
+			expected: []color.Gray{{0}, {0}, {1}},
+		},
+		{
+			value:    []color.Gray{{128}, {255}, {0}},
+			expected: []color.Gray{{0}, {128}, {255}},
+		},
+		{
+			value:    []color.Gray{{128}, {255}, {0}, {2}, {5}},
+			expected: []color.Gray{{0}, {2}, {5}, {128}, {255}},
+		},
+	}
+
+	for _, c := range cases {
+		SortGray(c.value, 0, len(c.value)-1)
+		if !GraySlicesEqual(c.value, c.expected) {
+			t.Errorf("%s: expected: %#v, actual: %#v", "SortRGBA", c.expected, c.value)
+		}
+	}
+}
+
 func TestRGBASlicesEqual(t *testing.T) {
 	cases := []struct {
 		a        []color.RGBA

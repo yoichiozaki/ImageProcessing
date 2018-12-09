@@ -16,16 +16,6 @@ func SortGray(data []color.Gray, min, max int) {
 	SortGray(data, p+1, max)
 }
 
-func SortGray_(data *[]color.Gray, min, max int) *[]color.Gray {
-	if min > max {
-		return &[]color.Gray{}
-	}
-	p := partitionGraySlice(*data, min, max)
-	SortGray(*data, min, p-1)
-	SortGray(*data, p+1, max)
-	return data
-}
-
 func partitionGraySlice(data []color.Gray, min, max int) int {
 	pivot := data[max]
 	i := min

@@ -247,4 +247,10 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+	// Cumulative histogram of histogramEqualization.png
+	cumulativeHistogramEqualizationHistogram := histogram.GetGrayHistogram(histogramEqualization)
+	err = io.Save("./img/histogramImage/cumulativeHistogramEqualizationHistogram.png", cumulativeHistogramEqualizationHistogram.Y.Cumulate().Dump(), io.PNGEncoder())
+	if err != nil {
+		panic(err)
+	}
 }
