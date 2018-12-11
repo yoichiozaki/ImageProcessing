@@ -67,5 +67,3 @@ func GenerateSpikeNoiseOn(src image.Image) *image.Gray {
 	})
 	return dst
 }
-
-// TODO: 10個だけ大きめのスパイクノイズを生成する関数

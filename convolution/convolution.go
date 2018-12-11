@@ -5,7 +5,6 @@ import (
 	"ImageProcessing/clone"
 	"ImageProcessing/parallel"
 	"image"
-	"log"
 	"math"
 )
 
@@ -14,7 +13,7 @@ type Options struct {
 }
 
 func Convolve(img image.Image, kernel Matrix, opt *Options) *image.Gray {
-	log.Println(kernel.String())
+	// log.Println(kernel.String())
 	wrap := false
 	if opt != nil {
 		wrap = opt.Wrap
@@ -58,4 +57,5 @@ func execute(img image.Image, kernel Matrix, wrap bool) *image.Gray {
 	parallel.Line(srcHeight-(radiusY*2), _execution)
 	return dst
 }
+
 

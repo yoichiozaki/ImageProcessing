@@ -38,7 +38,7 @@ func (k *Kernel) GetNormalizedMatrix() Matrix {
 	for i := 0; i < k.Width*k.Height; i++ {
 		normalized.Matrix[i] = k.Matrix[i] / absum
 	}
-	fmt.Println(normalized)
+	// fmt.Println(normalized)
 	return normalized
 }
 

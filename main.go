@@ -41,7 +41,7 @@ func main() {
 	}
 
 	// Gaussian Blur
-	gaussianBlur := filter.GaussianBlur(grayscale, 10)
+	gaussianBlur := filter.GaussianBlur(grayscale, 3)
 	err = io.Save("./img/gaussianBlur.png", boxBlur, io.PNGEncoder())
 	if err != nil {
 		panic(err)
@@ -222,6 +222,29 @@ func main() {
 		panic(err)
 	}
 
+	// Bilateral filter
+	bilateralFilter := filter.BilateralFilter(grayscale, 5, 12, 16)
+	err = io.Save("./img/bilateralFilter.png", bilateralFilter, io.PNGEncoder())
+	if err != nil {
+		panic(err)
+	}
+	// histogram of smoothedGrayscaleWithSpikeNoiseByMedian.png
+	bilateralFilterHistogram := histogram.GetGrayHistogram(bilateralFilter)
+	err = io.Save("./img/histogramImage/bilateralFilterHistogram.png", bilateralFilterHistogram.Y.Dump(), io.PNGEncoder())
+	if err != nil {
+		panic(err)
+	}
+	bilateralFilter2 := filter.BilateralFilter(bilateralFilter, 5, 12, 16)
+	err = io.Save("./img/bilateralFilter2.png", bilateralFilter2, io.PNGEncoder())
+	if err != nil {
+		panic(err)
+	}
+	bilateralFilter3 := filter.BilateralFilter(bilateralFilter2, 5, 12, 16)
+	err = io.Save("./img/bilateralFilter3.png", bilateralFilter3, io.PNGEncoder())
+	if err != nil {
+		panic(err)
+	}
+
 	// Gamma correct
 	gammaCorrect := filter.Gamma(grayscale, 0.5)
 	err = io.Save("./img/gammaCorrect.png", gammaCorrect, io.PNGEncoder())
@@ -250,6 +273,32 @@ func main() {
 	// Cumulative histogram of histogramEqualization.png
 	cumulativeHistogramEqualizationHistogram := histogram.GetGrayHistogram(histogramEqualization)
 	err = io.Save("./img/histogramImage/cumulativeHistogramEqualizationHistogram.png", cumulativeHistogramEqualizationHistogram.Y.Cumulate().Dump(), io.PNGEncoder())
+	if err != nil {
+		panic(err)
+	}
+
+	// Halftoning with dithering method
+	halftoningWithDitheringMethod := filter.HalftoningWithDitheringMethod(grayscale)
+	err = io.Save("./img/halftoningWithDitheringMethod.png", halftoningWithDitheringMethod, io.PNGEncoder())
+	if err != nil {
+		panic(err)
+	}
+	// histogram of halftoningWithDitheringMethod.png
+	halftoningWithDitheringMethodHistogram := histogram.GetGrayHistogram(halftoningWithDitheringMethod)
+	err = io.Save("./img/histogramImage/halftoningWithDitheringMethodHistogram.png", halftoningWithDitheringMethodHistogram.Y.Dump(), io.PNGEncoder())
+	if err != nil {
+		panic(err)
+	}
+
+	// Halftoning with error diffusion method
+	halftoningWithErrorDiffusionMethod := filter.HalftoningWithErrorDiffusionMethod(grayscale)
+	err = io.Save("./img/halftoningWithErrorDiffusionMethod.png", halftoningWithErrorDiffusionMethod, io.PNGEncoder())
+	if err != nil {
+		panic(err)
+	}
+	// histogram of halftoningWithDitheringMethod.png
+	halftoningWithErrorDiffusionMethodHistogram := histogram.GetGrayHistogram(halftoningWithErrorDiffusionMethod)
+	err = io.Save("./img/histogramImage/halftoningWithErrorDiffusionMethodHistogram.png", halftoningWithErrorDiffusionMethodHistogram.Y.Dump(), io.PNGEncoder())
 	if err != nil {
 		panic(err)
 	}
