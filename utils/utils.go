@@ -5,6 +5,9 @@ import (
 	"fmt"
 	"image"
 	"image/color"
+	"log"
+	"math"
+	"os"
 )
 
 func SortGray(data []color.Gray, min, max int) {
@@ -38,7 +41,7 @@ func RGBAToString(img *image.RGBA) string {
 	for y := 0; y < img.Bounds().Dy(); y++ {
 		result += "\n"
 		for x := 0; x < img.Bounds().Dx(); x++ {
-			pos := y * img.Stride + x*4
+			pos := y*img.Stride + x*4
 			result += fmt.Sprintf("%#X, ", img.Pix[pos+0])
 			result += fmt.Sprintf("%#X, ", img.Pix[pos+1])
 			result += fmt.Sprintf("%#X, ", img.Pix[pos+2])
@@ -57,7 +60,7 @@ func GrayToString(img *image.Gray) string {
 	for y := 0; y < img.Bounds().Dy(); y++ {
 		result += "\n"
 		for x := 0; x < img.Bounds().Dx(); x++ {
-			pos := y * img.Stride + x
+			pos := y*img.Stride + x
 			result += fmt.Sprintf("%#X, ", img.Pix[pos])
 
 		}
@@ -120,7 +123,7 @@ func RGBAImageEqual(a, b *image.RGBA) bool {
 	}
 	for y := 0; y < a.Bounds().Dy(); y++ {
 		for x := 0; x < a.Bounds().Dx(); x++ {
-			pos := y * a.Stride + x * 4
+			pos := y*a.Stride + x*4
 			if a.Pix[pos+0] != b.Pix[pos+0] {
 				return false
 			}
@@ -148,62 +151,54 @@ func Clamp(value, min, max float64) float64 {
 	return value
 }
 
-// TODO: 正しく解けていない
 func GaussElimination(equations *[][]float64) {
 
 	N := len(*equations)
 
-	// printMatrix := func() {
-	// 	fmt.Println("--------------------------")
-	// 	for i := 0; i < N; i++ {
-	// 		for j := 0; j < N; j++ {
-	// 			fmt.Printf("%fx_%d ", (*equations)[i][j], j + 1)
-	// 		}
-	// 		fmt.Printf("= %f\n", (*equations)[i][N])
-	// 	}
-	// }
-	// for i := 0; i < N; i++ {
-	// 	for j := 0; j < N; j++ {
-	// 		fmt.Printf("%fx_%d ", (*equations)[i][j], j + 1)
-	// 	}
-	// 	fmt.Printf("= %f\n", (*equations)[i][N])
-	// }
-
-	for k := 0; k < N-1; k++ {
-		for i := k + 1; i < N; i++ {
-			d := (*equations)[i][k] / (*equations)[k][k]
-			for j := k + 1; j <= N; j++ {
-				(*equations)[i][j] -= (*equations)[k][j] * d
+	for k := 0; k < N; k++ {
+		max := 0.0
+		s := k
+		for j := k; j < N; j++ {
+			if math.Abs((*equations)[j][k]) > max {
+				max = math.Abs((*equations)[j][k])
+				s = j
 			}
-			// printMatrix()
+		}
+		if max == 0 {
+			log.Println("can not solve this equation.")
+			os.Exit(1)
+		}
+		for j := 0; j <= N; j++ {
+			(*equations)[k][j], (*equations)[s][j] = (*equations)[s][j], (*equations)[k][j]
+		}
+		p := (*equations)[k][k]
+		for j := k; j < N+1; j++ {
+			(*equations)[k][j] /= p
+		}
+		for i := 0; i < N; i++ {
+			if i != k {
+				d := (*equations)[i][k]
+				for j := k; j < N+1; j++ {
+					(*equations)[i][j] -= d * (*equations)[k][j]
+				}
+			}
 		}
 	}
 
-	for i := N-1; i >= 0; i-- {
-		d := (*equations)[i][N]
-		for j := i + 1; j < N; j++ {
-			d -= (*equations)[i][j] * (*equations)[j][N]
-		}
-		(*equations)[i][N] = d / (*equations)[i][i]
-	}
-
-	// for k := 0; k < N; k++ {
-	// 	fmt.Printf("x_%d = %f\n", k+1, (*equations)[k][N])
-	// }
 }
 
 func SampleGaussElimination() {
 	const N = 4 // 変数個数
 	a := [][]float64{
-		{ 1.0, -2.0,  3.0, -4.0,  5.0},
-		{-2.0,  5.0,  8.0, -3.0,  9.0},
-		{ 5.0,  4.0,  7.0,  1.0, -1.0},
-		{ 9.0,  7.0,  3.0,  5.0,  4.0},
+		{1.0, -2.0, 3.0, -4.0, 5.0},
+		{-2.0, 5.0, 8.0, -3.0, 9.0},
+		{5.0, 4.0, 7.0, 1.0, -1.0},
+		{9.0, 7.0, 3.0, 5.0, 4.0},
 	}
 
 	for k := 0; k < N-1; k++ {
 		for i := k + 1; i < N; i++ {
-			d := a[i][k]/a[k][k]
+			d := a[i][k] / a[k][k]
 			fmt.Println(d)
 			for j := k + 1; j <= N; j++ {
 				a[i][j] -= a[k][j] * d
@@ -211,7 +206,7 @@ func SampleGaussElimination() {
 		}
 	}
 
-	for i := N-1; i >= 0; i-- {
+	for i := N - 1; i >= 0; i-- {
 		d := a[i][N]
 		for j := i + 1; j < N; j++ {
 			d -= a[i][j] * a[j][N]
