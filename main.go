@@ -7,6 +7,7 @@ import (
 	"ImageProcessing/noise"
 	"ImageProcessing/transform"
 	"ImageProcessing/utils"
+	"fmt"
 )
 
 func main() {
@@ -325,21 +326,20 @@ func main() {
 	}
 
 	// default
-	ua, va := 790.0, 1138.0
-	ub, vb := 1228.0, 1824.0
-	uc, vc := 2626.0, 1190.0
-	ud, vd := 2016.0, 744.0
+	ua, va := 836.0, 1152.0
+	ub, vb := 1224.0, 1788.0
+	uc, vc := 2596.0, 1188.0
+	ud, vd := 2020.0, 768.0
 	x, y := 400.0, 300.0
 	a := [][]float64{
-		// aの係数 bの係数 cの係数 dの係数 eの係数 fの係数  gの係数 		  hの係数 											   右辺
-		{	 x, 	0, 		0, 	   0, 	  0, 	 0, 	 -ud*x, 		0,   		  										 ud-ua},
-		{	 0, 	y, 		0, 	   0, 	  0, 	 0, 	 0, 			-ub*y,   	  										 ub-ua},
-		{	 0, 	0, 		1, 	   0, 	  0, 	 0, 	 0, 			0,   		  										 ua},
-		{	 0, 	0, 		0, 	   x, 	  0, 	 0, 	 -vd*x, 		0,   		  										 vd-va},
-		{	 0, 	0, 		0, 	   0, 	  y, 	 0, 	 0, 			-vb*y,   	  										 vb-va},
-		{	 0, 	0, 		0, 	   0, 	  0, 	 1, 	 0, 			0,   		  										 va},
-		{	 0, 	0, 		0, 	   0, 	  0, 	 0, 	 -uc*x+ud*x, 	-uc*y+ub*y,   										 uc-ud-ub+ua},
-		{	 0, 	0, 		0, 	   0, 	  0, 	 0, 	 0, 			-vc*y+vb*y-(-vc*x+vd*x)*(-uc*y+ub*y)/(-uc*x+ud*x),   vc-vd-vb+va-(-vc*x+vd*x)*(uc-ud-ub+ua)/(-uc*x+ud*x)},
+		{x, y, 0, 0, 0, 0, -uc*x, -uc*y, uc-ua},
+		{0, y, 0, 0, 0, 0, 0, -ub*y, ub - ua},
+		{0, 0, 1, 0, 0, 0, 0, 0, ua},
+		{0, 0, 0, x, y, 0, -vc*x, -vc*y, vc - va},
+		{0, 0, 0, 0, y, 0, 0, -vb*y, vb - va},
+		{0, 0, 0, 0, 0, 1, 0, 0, va},
+		{x, 0, 0, 0, 0, 0, -ud*x, 0,  ud - ua},
+		{0, 0, 0, x, 0 ,0, -vd*x, 0, vd - va},
 	}
 
 	utils.GaussElimination(&a)
@@ -348,26 +348,26 @@ func main() {
 		{a[3][len(a[0])-1], a[4][len(a[0])-1], a[5][len(a[0])-1]},
 		{a[6][len(a[0])-1], a[7][len(a[0])-1], 1},
 	}
-	// fmt.Println(planeProjectionMatrix)
-	// fmt.Println("A")
-	// fmt.Println(planeProjectionMatrix[0][0]*0 + planeProjectionMatrix[0][1]*0 + planeProjectionMatrix[0][2]*1)
-	// fmt.Println(planeProjectionMatrix[1][0]*0 + planeProjectionMatrix[1][1]*0 + planeProjectionMatrix[1][2]*1)
-	// fmt.Println(planeProjectionMatrix[2][0]*0 + planeProjectionMatrix[2][1]*0 + planeProjectionMatrix[2][2]*1)
-	// fmt.Println()
-	// fmt.Println("B")
-	// fmt.Println(planeProjectionMatrix[0][0]*0 + planeProjectionMatrix[0][1]*y + planeProjectionMatrix[0][2]*1)
-	// fmt.Println(planeProjectionMatrix[1][0]*0 + planeProjectionMatrix[1][1]*y + planeProjectionMatrix[1][2]*1)
-	// fmt.Println(planeProjectionMatrix[2][0]*0 + planeProjectionMatrix[2][1]*0 + planeProjectionMatrix[2][2]*1)
-	// fmt.Println()
-	// fmt.Println("C")
-	// fmt.Println(planeProjectionMatrix[0][0]*x + planeProjectionMatrix[0][1]*y + planeProjectionMatrix[0][2]*1)
-	// fmt.Println(planeProjectionMatrix[1][0]*x + planeProjectionMatrix[1][1]*y + planeProjectionMatrix[1][2]*1)
-	// fmt.Println(planeProjectionMatrix[2][0]*0 + planeProjectionMatrix[2][1]*0 + planeProjectionMatrix[2][2]*1)
-	// fmt.Println()
-	// fmt.Println("D")
-	// fmt.Println(planeProjectionMatrix[0][0]*x + planeProjectionMatrix[0][1]*0 + planeProjectionMatrix[0][2]*1)
-	// fmt.Println(planeProjectionMatrix[1][0]*x + planeProjectionMatrix[1][1]*0 + planeProjectionMatrix[1][2]*1)
-	// fmt.Println(planeProjectionMatrix[2][0]*0 + planeProjectionMatrix[2][1]*0 + planeProjectionMatrix[2][2]*1)
+	fmt.Println(planeProjectionMatrix)
+	fmt.Println("A")
+	fmt.Println(planeProjectionMatrix[0][0]*0 + planeProjectionMatrix[0][1]*0 + planeProjectionMatrix[0][2]*1)
+	fmt.Println(planeProjectionMatrix[1][0]*0 + planeProjectionMatrix[1][1]*0 + planeProjectionMatrix[1][2]*1)
+	fmt.Println(planeProjectionMatrix[2][0]*0 + planeProjectionMatrix[2][1]*0 + planeProjectionMatrix[2][2]*1)
+	fmt.Println()
+	fmt.Println("B")
+	fmt.Println(planeProjectionMatrix[0][0]*0 + planeProjectionMatrix[0][1]*y + planeProjectionMatrix[0][2]*1)
+	fmt.Println(planeProjectionMatrix[1][0]*0 + planeProjectionMatrix[1][1]*y + planeProjectionMatrix[1][2]*1)
+	fmt.Println(planeProjectionMatrix[2][0]*0 + planeProjectionMatrix[2][1]*0 + planeProjectionMatrix[2][2]*1)
+	fmt.Println()
+	fmt.Println("C")
+	fmt.Println(planeProjectionMatrix[0][0]*x + planeProjectionMatrix[0][1]*y + planeProjectionMatrix[0][2]*1)
+	fmt.Println(planeProjectionMatrix[1][0]*x + planeProjectionMatrix[1][1]*y + planeProjectionMatrix[1][2]*1)
+	fmt.Println(planeProjectionMatrix[2][0]*0 + planeProjectionMatrix[2][1]*0 + planeProjectionMatrix[2][2]*1)
+	fmt.Println()
+	fmt.Println("D")
+	fmt.Println(planeProjectionMatrix[0][0]*x + planeProjectionMatrix[0][1]*0 + planeProjectionMatrix[0][2]*1)
+	fmt.Println(planeProjectionMatrix[1][0]*x + planeProjectionMatrix[1][1]*0 + planeProjectionMatrix[1][2]*1)
+	fmt.Println(planeProjectionMatrix[2][0]*0 + planeProjectionMatrix[2][1]*0 + planeProjectionMatrix[2][2]*1)
 
 	// transform keystoneEffectSampleOriginalGrayscale.png
 	keystoneEffect := transform.KeystoneEffect(keystoneEffectSampleOriginalGrayscale, &planeProjectionMatrix)
