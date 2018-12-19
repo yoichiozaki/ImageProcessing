@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="240da25f-e9dc-41bc-98fc-87162d5a1135" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/binaryNoise.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/binaryNoise.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/gaussianNoise.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/gaussianNoise.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/grayscaleWithSpikeNoise.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/grayscaleWithSpikeNoise.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/histogramImage/binaryNoiseHistogram.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/histogramImage/binaryNoiseHistogram.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/histogramImage/gaussianNoiseHistogram.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/histogramImage/gaussianNoiseHistogram.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/histogramImage/grayscaleWithSpikeNoiseHistogram.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/histogramImage/grayscaleWithSpikeNoiseHistogram.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/histogramImage/keystoneEffectHistogram.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/histogramImage/keystoneEffectHistogram.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/histogramImage/smoothedGrayscaleWithSpikeNoiseByMedianHistogram.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/histogramImage/smoothedGrayscaleWithSpikeNoiseByMedianHistogram.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/histogramImage/uniformNoiseHistogram.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/histogramImage/uniformNoiseHistogram.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/keystoneEffect.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/keystoneEffect.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/smoothedGrayscaleWithSpikeNoiseByMedian.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/smoothedGrayscaleWithSpikeNoiseByMedian.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/spikeNoise.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/spikeNoise.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/uniformNoise.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/uniformNoise.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/transform/transform.go" beforeDir="false" afterPath="$PROJECT_DIR$/transform/transform.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/utils.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/utils.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="381" column="42" selection-start-line="381" selection-start-column="42" selection-end-line="381" selection-end-column="42" />
+            <state relative-caret-position="293">
+              <caret line="342" column="5" selection-start-line="342" selection-start-column="5" selection-end-line="342" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -55,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/transform/transform.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+              <caret line="15" column="60" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
               <folding>
                 <element signature="e#19#63#0" expanded="true" />
               </folding>
@@ -87,7 +72,7 @@
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/img/keystoneEffect.png">
           <provider selected="true" editor-type-id="images" />
         </entry>
@@ -137,8 +122,8 @@
         <option value="$PROJECT_DIR$/filter/filter.go" />
         <option value="$PROJECT_DIR$/utils/utils_test.go" />
         <option value="$PROJECT_DIR$/utils/utils.go" />
-        <option value="$PROJECT_DIR$/main.go" />
         <option value="$PROJECT_DIR$/transform/transform.go" />
+        <option value="$PROJECT_DIR$/main.go" />
       </list>
     </option>
   </component>
@@ -600,25 +585,25 @@
     <entry file="file://$PROJECT_DIR$/img/keystoneEffectSampleOriginalGrayscale.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="381" column="42" selection-start-line="381" selection-start-column="42" selection-end-line="381" selection-end-column="42" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/img/keystoneEffect.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/transform/transform.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+          <caret line="15" column="60" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
           <folding>
             <element signature="e#19#63#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/img/keystoneEffect.png">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="342" column="5" selection-start-line="342" selection-start-column="5" selection-end-line="342" selection-end-column="5" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

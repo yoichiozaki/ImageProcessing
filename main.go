@@ -374,7 +374,7 @@ func main() {
 	// fmt.Println(planeProjectionMatrix[2][0]*x + planeProjectionMatrix[2][1]*0 + planeProjectionMatrix[2][2]*1)
 
 	// transform keystoneEffectSampleOriginalGrayscale.png
-	keystoneEffect := transform.KeystoneEffect(keystoneEffectSampleOriginalGrayscale, &planeProjectionMatrix, x, y)
+	keystoneEffect := transform.KeystoneEffect(keystoneEffectSampleOriginalGrayscale, &planeProjectionMatrix, int(x), int(y))
 	err = io.Save("./img/keystoneEffect.png", keystoneEffect, io.PNGEncoder())
 	if err != nil {
 		panic(err)
