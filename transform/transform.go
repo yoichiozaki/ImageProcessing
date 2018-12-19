@@ -11,9 +11,9 @@ import (
 // 出力画像の位置から行列をかけて求められる入力画像の位置が整数値にならない時はガウスを取ってしまえばいい
 // ガウスじゃないものを使うともっと正確に描写できるようになるかもしれない
 // 出力画像の位置と入力画像の位置を変換するのは行列
-func KeystoneEffect(img image.Image, matrix *[][]float64) *image.Gray {
+func KeystoneEffect(img image.Image, matrix *[][]float64, output_x, output_y int) *image.Gray {
 	src := clone.AsGray(img)
-	dst := image.NewGray(image.Rect(0, 0, 800, 600))
+	dst := image.NewGray(image.Rect(0, 0, output_x, output_y))
 	bounds := dst.Bounds()
 	fn := func(x, y int) (int, int) {
 		u := (*matrix)[0][0]*float64(x) + (*matrix)[0][1]*float64(y) + (*matrix)[0][2]*float64(1)

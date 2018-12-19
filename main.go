@@ -330,10 +330,6 @@ func main() {
 	ub, vb := 1224.0, 1788.0
 	uc, vc := 2596.0, 1188.0
 	ud, vd := 2020.0, 768.0
-	// ua, va := 700.0, 800.0
-	// ub, vb := 700.0, 2000.0
-	// uc, vc := 3000.0, 2000.0
-	// ud, vd := 3000.0, 800.0
 	x, y := 800.0, 600.0
 	a := [][]float64{
 		{x, y, 0, 0, 0, 0, -uc * x, -uc * y, uc - ua},
@@ -345,7 +341,6 @@ func main() {
 		{x, 0, 0, 0, 0, 0, -ud * x, 0, ud - ua},
 		{0, 0, 0, x, 0, 0, -vd * x, 0, vd - va},
 	}
-
 	utils.GaussElimination(&a)
 	for i := range a {
 		fmt.Println(a[i])
@@ -355,31 +350,31 @@ func main() {
 		{a[3][len(a[0])-1], a[4][len(a[0])-1], a[5][len(a[0])-1]},
 		{a[6][len(a[0])-1], a[7][len(a[0])-1], 1},
 	}
-	for i := range planeProjectionMatrix {
-		fmt.Println(planeProjectionMatrix[i])
-	}
-	fmt.Println("A")
-	fmt.Println(planeProjectionMatrix[0][0]*0 + planeProjectionMatrix[0][1]*0 + planeProjectionMatrix[0][2]*1)
-	fmt.Println(planeProjectionMatrix[1][0]*0 + planeProjectionMatrix[1][1]*0 + planeProjectionMatrix[1][2]*1)
-	fmt.Println(planeProjectionMatrix[2][0]*0 + planeProjectionMatrix[2][1]*0 + planeProjectionMatrix[2][2]*1)
-	fmt.Println()
-	fmt.Println("B")
-	fmt.Println(planeProjectionMatrix[0][0]*0 + planeProjectionMatrix[0][1]*y + planeProjectionMatrix[0][2]*1)
-	fmt.Println(planeProjectionMatrix[1][0]*0 + planeProjectionMatrix[1][1]*y + planeProjectionMatrix[1][2]*1)
-	fmt.Println(planeProjectionMatrix[2][0]*0 + planeProjectionMatrix[2][1]*y + planeProjectionMatrix[2][2]*1)
-	fmt.Println()
-	fmt.Println("C")
-	fmt.Println(planeProjectionMatrix[0][0]*x + planeProjectionMatrix[0][1]*y + planeProjectionMatrix[0][2]*1)
-	fmt.Println(planeProjectionMatrix[1][0]*x + planeProjectionMatrix[1][1]*y + planeProjectionMatrix[1][2]*1)
-	fmt.Println(planeProjectionMatrix[2][0]*x + planeProjectionMatrix[2][1]*y + planeProjectionMatrix[2][2]*1)
-	fmt.Println()
-	fmt.Println("D")
-	fmt.Println(planeProjectionMatrix[0][0]*x + planeProjectionMatrix[0][1]*0 + planeProjectionMatrix[0][2]*1)
-	fmt.Println(planeProjectionMatrix[1][0]*x + planeProjectionMatrix[1][1]*0 + planeProjectionMatrix[1][2]*1)
-	fmt.Println(planeProjectionMatrix[2][0]*x + planeProjectionMatrix[2][1]*0 + planeProjectionMatrix[2][2]*1)
+	// for i := range planeProjectionMatrix {
+	// 	fmt.Println(planeProjectionMatrix[i])
+	// }
+	// fmt.Println("A")
+	// fmt.Println(planeProjectionMatrix[0][0]*0 + planeProjectionMatrix[0][1]*0 + planeProjectionMatrix[0][2]*1)
+	// fmt.Println(planeProjectionMatrix[1][0]*0 + planeProjectionMatrix[1][1]*0 + planeProjectionMatrix[1][2]*1)
+	// fmt.Println(planeProjectionMatrix[2][0]*0 + planeProjectionMatrix[2][1]*0 + planeProjectionMatrix[2][2]*1)
+	// fmt.Println()
+	// fmt.Println("B")
+	// fmt.Println(planeProjectionMatrix[0][0]*0 + planeProjectionMatrix[0][1]*y + planeProjectionMatrix[0][2]*1)
+	// fmt.Println(planeProjectionMatrix[1][0]*0 + planeProjectionMatrix[1][1]*y + planeProjectionMatrix[1][2]*1)
+	// fmt.Println(planeProjectionMatrix[2][0]*0 + planeProjectionMatrix[2][1]*y + planeProjectionMatrix[2][2]*1)
+	// fmt.Println()
+	// fmt.Println("C")
+	// fmt.Println(planeProjectionMatrix[0][0]*x + planeProjectionMatrix[0][1]*y + planeProjectionMatrix[0][2]*1)
+	// fmt.Println(planeProjectionMatrix[1][0]*x + planeProjectionMatrix[1][1]*y + planeProjectionMatrix[1][2]*1)
+	// fmt.Println(planeProjectionMatrix[2][0]*x + planeProjectionMatrix[2][1]*y + planeProjectionMatrix[2][2]*1)
+	// fmt.Println()
+	// fmt.Println("D")
+	// fmt.Println(planeProjectionMatrix[0][0]*x + planeProjectionMatrix[0][1]*0 + planeProjectionMatrix[0][2]*1)
+	// fmt.Println(planeProjectionMatrix[1][0]*x + planeProjectionMatrix[1][1]*0 + planeProjectionMatrix[1][2]*1)
+	// fmt.Println(planeProjectionMatrix[2][0]*x + planeProjectionMatrix[2][1]*0 + planeProjectionMatrix[2][2]*1)
 
 	// transform keystoneEffectSampleOriginalGrayscale.png
-	keystoneEffect := transform.KeystoneEffect(keystoneEffectSampleOriginalGrayscale, &planeProjectionMatrix)
+	keystoneEffect := transform.KeystoneEffect(keystoneEffectSampleOriginalGrayscale, &planeProjectionMatrix, x, y)
 	err = io.Save("./img/keystoneEffect.png", keystoneEffect, io.PNGEncoder())
 	if err != nil {
 		panic(err)
