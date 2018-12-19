@@ -151,6 +151,7 @@ func Clamp(value, min, max float64) float64 {
 	return value
 }
 
+// TODO: 方程式の解き方を検証する必要がある
 func GaussElimination(equations *[][]float64) {
 
 	N := len(*equations)
@@ -196,22 +197,33 @@ func SampleGaussElimination() {
 		{9.0, 7.0, 3.0, 5.0, 4.0},
 	}
 
-	for k := 0; k < N-1; k++ {
-		for i := k + 1; i < N; i++ {
-			d := a[i][k] / a[k][k]
-			fmt.Println(d)
-			for j := k + 1; j <= N; j++ {
-				a[i][j] -= a[k][j] * d
+	for k := 0; k < N; k++ {
+		max := 0.0
+		s := k
+		for j := k; j < N; j++ {
+			if math.Abs(a[j][k]) > max {
+				max = math.Abs(a[j][k])
+				s = j
 			}
 		}
-	}
-
-	for i := N - 1; i >= 0; i-- {
-		d := a[i][N]
-		for j := i + 1; j < N; j++ {
-			d -= a[i][j] * a[j][N]
+		if max == 0 {
+			log.Println("can not solve this equation.")
+			os.Exit(1)
 		}
-		a[i][N] = d / a[i][i]
+		for j := 0; j <= N; j++ {(a[k][j]),(a[s][j]) =(a[s][j]),(a[k][j])
+		}
+		p := a[k][k]
+		for j := k; j < N+1; j++ {
+			(a[k][j]) /= p
+		}
+		for i := 0; i < N; i++ {
+			if i != k {
+				d :=(a[i][k])
+				for j := k; j < N+1; j++ {
+					(a[i][j]) -= d *(a[k][j])
+				}
+			}
+		}
 	}
 
 	for k := 0; k < N; k++ {

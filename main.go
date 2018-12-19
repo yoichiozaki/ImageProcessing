@@ -330,7 +330,11 @@ func main() {
 	ub, vb := 1224.0, 1788.0
 	uc, vc := 2596.0, 1188.0
 	ud, vd := 2020.0, 768.0
-	x, y := 400.0, 300.0
+	// ua, va := 700.0, 800.0
+	// ub, vb := 700.0, 2000.0
+	// uc, vc := 3000.0, 2000.0
+	// ud, vd := 3000.0, 800.0
+	x, y := 800.0, 600.0
 	a := [][]float64{
 		{x, y, 0, 0, 0, 0, -uc * x, -uc * y, uc - ua},
 		{0, y, 0, 0, 0, 0, 0, -ub * y, ub - ua},
@@ -362,17 +366,17 @@ func main() {
 	fmt.Println("B")
 	fmt.Println(planeProjectionMatrix[0][0]*0 + planeProjectionMatrix[0][1]*y + planeProjectionMatrix[0][2]*1)
 	fmt.Println(planeProjectionMatrix[1][0]*0 + planeProjectionMatrix[1][1]*y + planeProjectionMatrix[1][2]*1)
-	fmt.Println(planeProjectionMatrix[2][0]*0 + planeProjectionMatrix[2][1]*0 + planeProjectionMatrix[2][2]*1)
+	fmt.Println(planeProjectionMatrix[2][0]*0 + planeProjectionMatrix[2][1]*y + planeProjectionMatrix[2][2]*1)
 	fmt.Println()
 	fmt.Println("C")
 	fmt.Println(planeProjectionMatrix[0][0]*x + planeProjectionMatrix[0][1]*y + planeProjectionMatrix[0][2]*1)
 	fmt.Println(planeProjectionMatrix[1][0]*x + planeProjectionMatrix[1][1]*y + planeProjectionMatrix[1][2]*1)
-	fmt.Println(planeProjectionMatrix[2][0]*0 + planeProjectionMatrix[2][1]*0 + planeProjectionMatrix[2][2]*1)
+	fmt.Println(planeProjectionMatrix[2][0]*x + planeProjectionMatrix[2][1]*y + planeProjectionMatrix[2][2]*1)
 	fmt.Println()
 	fmt.Println("D")
 	fmt.Println(planeProjectionMatrix[0][0]*x + planeProjectionMatrix[0][1]*0 + planeProjectionMatrix[0][2]*1)
 	fmt.Println(planeProjectionMatrix[1][0]*x + planeProjectionMatrix[1][1]*0 + planeProjectionMatrix[1][2]*1)
-	fmt.Println(planeProjectionMatrix[2][0]*0 + planeProjectionMatrix[2][1]*0 + planeProjectionMatrix[2][2]*1)
+	fmt.Println(planeProjectionMatrix[2][0]*x + planeProjectionMatrix[2][1]*0 + planeProjectionMatrix[2][2]*1)
 
 	// transform keystoneEffectSampleOriginalGrayscale.png
 	keystoneEffect := transform.KeystoneEffect(keystoneEffectSampleOriginalGrayscale, &planeProjectionMatrix)
@@ -380,10 +384,12 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	// histogram of grayscale.png
+	// histogram of keystoneEffect.png
 	keystoneEffectHistogram := histogram.GetGrayHistogram(keystoneEffect)
 	err = io.Save("./img/histogramImage/keystoneEffectHistogram.png", keystoneEffectHistogram.Y.Dump(), io.PNGEncoder())
 	if err != nil {
 		panic(err)
 	}
+
+	utils.SampleGaussElimination()
 }
