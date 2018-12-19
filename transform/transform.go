@@ -30,3 +30,20 @@ func KeystoneEffect(img image.Image, matrix *[][]float64, output_x, output_y int
 	}
 	return dst
 }
+
+func GetUnion(img0 image.Image, img1 image.Image) *image.Gray {
+	src0 := clone.AsGray(img0)
+	src1 := clone.AsGray(img1)
+	bounds := src0.Rect
+	dst := image.NewGray(bounds)
+	for y := 0; y < bounds.Dy(); y++ {
+		for x := 0; x < bounds.Dx(); x++ {
+			if src0.Pix[y*src0.Stride+x] < 85 {
+				dst.SetGray(x, y, src1.GrayAt(x, y)) // 置換
+			} else {
+				dst.SetGray(x, y, src0.GrayAt(x, y))
+			}
+		}
+	}
+	return dst
+}
