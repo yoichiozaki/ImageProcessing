@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="240da25f-e9dc-41bc-98fc-87162d5a1135" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/C2_0_original.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/C2_1_original.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/convolution/convolution.go" beforeDir="false" afterPath="$PROJECT_DIR$/convolution/convolution.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/filter/filter.go" beforeDir="false" afterPath="$PROJECT_DIR$/filter/filter.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/img/binaryNoise.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/binaryNoise.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/img/gaussianNoise.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/gaussianNoise.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/img/grayscaleWithSpikeNoise.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/grayscaleWithSpikeNoise.png" afterDir="false" />
@@ -17,7 +17,6 @@
       <change beforePath="$PROJECT_DIR$/img/spikeNoise.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/spikeNoise.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/img/uniformNoise.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/uniformNoise.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transform/transform.go" beforeDir="false" afterPath="$PROJECT_DIR$/transform/transform.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,65 +26,92 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main.go">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/utils.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="477" column="20" selection-start-line="477" selection-start-column="20" selection-end-line="477" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/img/C2_result.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/img/keystoneEffect_C2_1_grayscale.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/img/keystoneEffect_C2_0_grayscale.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/img/C2_0_grayscale.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/img/C2_1_grayscale.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/img/C2_0_original.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/img/C2_1_original.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/transform/transform.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+            <state relative-caret-position="2250">
+              <caret line="193" column="8" selection-start-line="193" selection-start-column="8" selection-end-line="196" selection-end-column="34" />
               <folding>
-                <element signature="e#19#63#0" expanded="true" />
+                <element signature="n#!!block;n#SortGray#0" />
+                <element signature="n#!!block;n#partitionGraySlice#0" />
+                <element signature="n#!!block;n#RGBAToString#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/img/keystoneEffect.png">
+        <entry file="file://$PROJECT_DIR$/parallel/parallel.go">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/convolution/kernel.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1065">
+              <caret line="74" selection-start-line="7" selection-end-line="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="65" column="101" selection-start-line="65" selection-start-column="101" selection-end-line="65" selection-end-column="101" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/img/fixedDirectionBlur.png">
           <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/img/grayscale.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/filter/filter.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="421">
+              <caret line="86" column="55" selection-start-line="86" selection-start-column="55" selection-end-line="86" selection-end-column="55" />
+              <folding>
+                <element signature="e#75#255#0" expanded="true" />
+                <element signature="e#2640#2853#0" />
+                <element signature="e#2902#3109#0" />
+                <element signature="e#3428#3626#0" />
+                <element signature="e#3962#4160#0" />
+                <element signature="e#4494#4677#0" />
+                <element signature="e#4787#5670#0" />
+                <element signature="e#5781#6053#0" />
+                <element signature="e#6152#6867#0" />
+                <element signature="e#6924#7370#0" />
+                <element signature="e#7428#8171#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/img/boxBlur.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/convolution/convolution.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="79">
+              <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/convolution/kernel_test.go">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -116,15 +142,15 @@
         <option value="$PROJECT_DIR$/filter/filter_test.go" />
         <option value="$PROJECT_DIR$/histogram/histogram.go" />
         <option value="$PROJECT_DIR$/clone/clone.go" />
-        <option value="$PROJECT_DIR$/convolution/convolution.go" />
         <option value="$PROJECT_DIR$/convolution/kernel.go" />
         <option value="$PROJECT_DIR$/io/io.go" />
         <option value="$PROJECT_DIR$/noise/noise.go" />
-        <option value="$PROJECT_DIR$/filter/filter.go" />
         <option value="$PROJECT_DIR$/utils/utils_test.go" />
         <option value="$PROJECT_DIR$/utils/utils.go" />
         <option value="$PROJECT_DIR$/transform/transform.go" />
+        <option value="$PROJECT_DIR$/convolution/convolution.go" />
         <option value="$PROJECT_DIR$/main.go" />
+        <option value="$PROJECT_DIR$/filter/filter.go" />
       </list>
     </option>
   </component>
@@ -175,12 +201,37 @@
             <path>
               <item name="ImageProcessing" type="b2602c69:ProjectViewProjectNode" />
               <item name="ImageProcessing" type="462c0819:PsiDirectoryNode" />
+              <item name="convolution" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ImageProcessing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ImageProcessing" type="462c0819:PsiDirectoryNode" />
               <item name="filter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ImageProcessing" type="b2602c69:ProjectViewProjectNode" />
               <item name="ImageProcessing" type="462c0819:PsiDirectoryNode" />
+              <item name="histogram" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ImageProcessing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ImageProcessing" type="462c0819:PsiDirectoryNode" />
               <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ImageProcessing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ImageProcessing" type="462c0819:PsiDirectoryNode" />
+              <item name="io" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ImageProcessing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ImageProcessing" type="462c0819:PsiDirectoryNode" />
+              <item name="noise" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ImageProcessing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ImageProcessing" type="462c0819:PsiDirectoryNode" />
+              <item name="parallel" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ImageProcessing" type="b2602c69:ProjectViewProjectNode" />
@@ -355,7 +406,7 @@
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5012531" side_tool="true" weight="0.3368984" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.32941177" />
-      <window_info anchor="bottom" id="Terminal" order="3" weight="0.33582887" />
+      <window_info anchor="bottom" id="Terminal" order="3" weight="0.3354232" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32941177" />
       <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.49874687" visible="true" weight="0.32706374" />
@@ -374,32 +425,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/parallel/parallel.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-          <folding>
-            <element signature="e#101#130#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/go/1.11.2/libexec/src/builtin/builtin.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/histogramImage/binaryNoiseHistogram.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/histogramImage/boxBlurHistogram.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/histogramImage/cumulativeHistogramEqualizationHistogram.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/img/histogramImage/gammaCorrectHistogram.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -431,15 +456,6 @@
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/img/original.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/grayscale.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/dilate.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/boxBlur.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/img/binaryNoise.png">
@@ -477,34 +493,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/filter/filter_test.go">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/filter/filter.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="212" column="3" selection-start-line="212" selection-start-column="3" selection-end-line="212" selection-end-column="3" />
-          <folding>
-            <element signature="e#75#255#0" expanded="true" />
-            <element signature="e#576#1040#0" />
-            <element signature="e#1096#1410#0" />
-            <element signature="e#1471#1869#0" />
-            <element signature="e#1931#2325#0" />
-            <element signature="e#2380#2585#0" />
-            <element signature="e#2640#2853#0" />
-            <element signature="e#2902#3109#0" />
-            <element signature="e#3428#3626#0" />
-            <element signature="e#3962#4160#0" />
-            <element signature="e#4494#4677#0" />
-            <element signature="e#4787#5670#0" />
-            <element signature="e#5781#6053#0" />
-            <element signature="e#6152#6867#0" />
-            <element signature="e#6924#7370#0" />
-            <element signature="e#7428#8171#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/utils_test.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="512">
@@ -525,18 +513,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/img/gammaCorrect.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/utils.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2250">
-          <caret line="193" column="8" selection-start-line="193" selection-start-column="8" selection-end-line="196" selection-end-column="34" />
-          <folding>
-            <element signature="n#!!block;n#SortGray#0" />
-            <element signature="n#!!block;n#partitionGraySlice#0" />
-            <element signature="n#!!block;n#RGBAToString#0" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/img/histogramEqualization.png">
       <provider selected="true" editor-type-id="images" />
@@ -569,9 +545,6 @@
     <entry file="file://$PROJECT_DIR$/img/C2_1_grayscale.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/img/C2_1_original.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/img/C2_0_grayscale.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -581,23 +554,95 @@
     <entry file="file://$PROJECT_DIR$/img/keystoneEffect_C2_0_grayscale.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/img/C2_1_original.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/C2_result.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/dilate.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/filter/filter_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1252" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/transform/transform.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+        <state relative-caret-position="600">
+          <caret line="40" column="45" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
           <folding>
             <element signature="e#19#63#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/img/C2_result.png">
+    <entry file="file://$PROJECT_DIR$/convolution/convolution.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/convolution/kernel.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1065">
+          <caret line="74" selection-start-line="7" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/convolution/kernel_test.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/utils.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2250">
+          <caret line="193" column="8" selection-start-line="193" selection-start-column="8" selection-end-line="196" selection-end-column="34" />
+          <folding>
+            <element signature="n#!!block;n#SortGray#0" />
+            <element signature="n#!!block;n#partitionGraySlice#0" />
+            <element signature="n#!!block;n#RGBAToString#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parallel/parallel.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/grayscale.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/boxBlur.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="477" column="20" selection-start-line="477" selection-start-column="20" selection-end-line="477" selection-end-column="20" />
+        <state relative-caret-position="465">
+          <caret line="65" column="101" selection-start-line="65" selection-start-column="101" selection-end-line="65" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/fixedDirectionBlur.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/filter/filter.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="86" column="55" selection-start-line="86" selection-start-column="55" selection-end-line="86" selection-end-column="55" />
+          <folding>
+            <element signature="e#75#255#0" expanded="true" />
+            <element signature="e#2640#2853#0" />
+            <element signature="e#2902#3109#0" />
+            <element signature="e#3428#3626#0" />
+            <element signature="e#3962#4160#0" />
+            <element signature="e#4494#4677#0" />
+            <element signature="e#4787#5670#0" />
+            <element signature="e#5781#6053#0" />
+            <element signature="e#6152#6867#0" />
+            <element signature="e#6924#7370#0" />
+            <element signature="e#7428#8171#0" />
+          </folding>
         </state>
       </provider>
     </entry>

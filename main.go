@@ -55,6 +55,19 @@ func main() {
 		panic(err)
 	}
 
+	// Fixed Direction Blur
+	fixedDirectionBlur := filter.FixedDirectionBlur(grayscale)
+	err = io.Save("./img/fixedDirectionBlur.png", fixedDirectionBlur, io.PNGEncoder())
+	if err != nil {
+		panic(err)
+	}
+	// histogram of boxBlur.png
+	fixedDirectionBlurHistogram := histogram.GetGrayHistogram(fixedDirectionBlur)
+	err = io.Save("./img/histogramImage/fixedDirectionBlurHistogram.png", fixedDirectionBlurHistogram.Y.Dump(), io.PNGEncoder())
+	if err != nil {
+		panic(err)
+	}
+
 	// Edge Detection with Laplacian
 	edgeDetection := filter.EdgeDetection(grayscale, 5)
 	err = io.Save("./img/edgeDetection.png", edgeDetection, io.PNGEncoder())

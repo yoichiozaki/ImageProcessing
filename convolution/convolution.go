@@ -13,7 +13,6 @@ type Options struct {
 }
 
 func Convolve(img image.Image, kernel Matrix, opt *Options) *image.Gray {
-	// log.Println(kernel.String())
 	wrap := false
 	if opt != nil {
 		wrap = opt.Wrap

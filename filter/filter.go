@@ -7,6 +7,7 @@ import (
 	"ImageProcessing/histogram"
 	"ImageProcessing/parallel"
 	"ImageProcessing/utils"
+	"fmt"
 	"image"
 	"image/color"
 	"math"
@@ -66,6 +67,32 @@ func BoxBlur(img image.Image, radius int) *image.Gray {
 	return convolution.Convolve(img, kernel.GetNormalizedMatrix(), &convolution.Options{Wrap: false})
 }
 
+func FixedDirectionBlur(img image.Image) *image.Gray {
+	kernel := convolution.Kernel{
+		Matrix: []float64{
+			1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+			0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+			0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+			0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+			0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+			0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+			0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0,
+			0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0,
+			0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0,
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0,
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+		},
+		Width:  15,
+		Height: 15,
+	}
+	return convolution.Convolve(img, kernel.GetNormalizedMatrix(), &convolution.Options{Wrap: false})
+
+}
+
 func GaussianBlur(img image.Image, radius int) *image.Gray {
 	if radius <= 0 {
 		return clone.AsGray(img)
@@ -95,6 +122,7 @@ func EdgeDetection(img image.Image, radius int) *image.Gray {
 			kernel.Matrix[y*length+x] = v
 		}
 	}
+	fmt.Println(kernel.String())
 	return convolution.Convolve(img, kernel, &convolution.Options{Wrap: false})
 }
 
@@ -109,7 +137,6 @@ func FixedEdgeDetection(img image.Image) *image.Gray {
 		Height: 3,
 	}
 	return convolution.Convolve(img, &kernel, &convolution.Options{Wrap: false})
-
 }
 
 func Sharpen(img image.Image, k float64) *image.Gray {
