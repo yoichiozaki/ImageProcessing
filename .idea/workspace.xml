@@ -2,21 +2,62 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="240da25f-e9dc-41bc-98fc-87162d5a1135" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/img/C3_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/C3_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/C3_2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/convolution/convolution.go" beforeDir="false" afterPath="$PROJECT_DIR$/convolution/convolution.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/filter/filter.go" beforeDir="false" afterPath="$PROJECT_DIR$/filter/filter.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/bilateralFilter.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/bilateralFilter.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/bilateralFilter2.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/bilateralFilter2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/bilateralFilter3.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/bilateralFilter3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/img/binaryNoise.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/binaryNoise.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/boxBlur.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/boxBlur.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/dilate.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/dilate.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/edgeDetection.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/edgeDetection.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/erode.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/erode.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/fixEdgeDetection.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/fixEdgeDetection.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/fixedDirectionBlur.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/fixedDirectionBlur.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/fixedSharpen.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/fixedSharpen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/gammaCorrect.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/gammaCorrect.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/gaussianBlur.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/gaussianBlur.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/img/gaussianNoise.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/gaussianNoise.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/grayscale.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/grayscale.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/img/grayscaleWithSpikeNoise.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/grayscaleWithSpikeNoise.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/histogramImage/binaryNoiseHistogram.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/histogramImage/binaryNoiseHistogram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/halftoningWithDitheringMethod.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/halftoningWithDitheringMethod.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/halftoningWithErrorDiffusionMethod.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/halftoningWithErrorDiffusionMethod.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/histogramEqualization.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/histogramEqualization.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/histogramImage/bilateralFilterHistogram.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/histogramImage/bilateralFilterHistogram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/histogramImage/boxBlurHistogram.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/histogramImage/boxBlurHistogram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/histogramImage/cumulativeHistogramEqualizationHistogram.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/histogramImage/cumulativeHistogramEqualizationHistogram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/histogramImage/dilateHistogram.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/histogramImage/dilateHistogram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/histogramImage/edgeDetectionHistogram.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/histogramImage/edgeDetectionHistogram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/histogramImage/erodeHistogram.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/histogramImage/erodeHistogram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/histogramImage/fixedDirectionBlurHistogram.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/histogramImage/fixedDirectionBlurHistogram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/histogramImage/fixedEdgeDetectionHistogram.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/histogramImage/fixedEdgeDetectionHistogram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/histogramImage/fixedSharpenHistogram.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/histogramImage/fixedSharpenHistogram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/histogramImage/gammaCorrectHistogram.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/histogramImage/gammaCorrectHistogram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/histogramImage/gaussianBlurHistogram.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/histogramImage/gaussianBlurHistogram.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/img/histogramImage/gaussianNoiseHistogram.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/histogramImage/gaussianNoiseHistogram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/histogramImage/grayscalHistogram.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/histogramImage/grayscalHistogram.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/img/histogramImage/grayscaleWithSpikeNoiseHistogram.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/histogramImage/grayscaleWithSpikeNoiseHistogram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/histogramImage/halftoningWithDitheringMethodHistogram.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/histogramImage/halftoningWithDitheringMethodHistogram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/histogramImage/halftoningWithErrorDiffusionMethodHistogram.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/histogramImage/halftoningWithErrorDiffusionMethodHistogram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/histogramImage/histogramEqualizationHistogram.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/histogramImage/histogramEqualizationHistogram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/histogramImage/medianHistogram.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/histogramImage/medianHistogram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/histogramImage/sharpenHistogram.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/histogramImage/sharpenHistogram.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/img/histogramImage/smoothedGrayscaleWithSpikeNoiseByMedianHistogram.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/histogramImage/smoothedGrayscaleWithSpikeNoiseByMedianHistogram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/histogramImage/spikeNoiseHistogram.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/histogramImage/spikeNoiseHistogram.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/img/histogramImage/uniformNoiseHistogram.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/histogramImage/uniformNoiseHistogram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/median.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/median.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/original.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/original.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/sharpen.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/sharpen.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/img/smoothedGrayscaleWithSpikeNoiseByMedian.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/smoothedGrayscaleWithSpikeNoiseByMedian.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/img/spikeNoise.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/spikeNoise.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/img/uniformNoise.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/uniformNoise.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/noise/noise.go" beforeDir="false" afterPath="$PROJECT_DIR$/noise/noise.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transform/transform.go" beforeDir="false" afterPath="$PROJECT_DIR$/transform/transform.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/utils.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/utils.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,94 +65,73 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="ImageProcessing" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/utils.go">
+        <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2250">
-              <caret line="193" column="8" selection-start-line="193" selection-start-column="8" selection-end-line="196" selection-end-column="34" />
+            <state relative-caret-position="410">
+              <caret line="791" column="39" lean-forward="true" selection-start-line="791" selection-start-column="39" selection-end-line="791" selection-end-column="39" />
               <folding>
-                <element signature="n#!!block;n#SortGray#0" />
-                <element signature="n#!!block;n#partitionGraySlice#0" />
-                <element signature="n#!!block;n#RGBAToString#0" />
+                <element signature="e#14#180#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/parallel/parallel.go">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/convolution/kernel.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1065">
-              <caret line="74" selection-start-line="7" selection-end-line="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="65" column="101" selection-start-line="65" selection-start-column="101" selection-end-line="65" selection-end-column="101" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/img/fixedDirectionBlur.png">
+        <entry file="file://$PROJECT_DIR$/img/C3_Stitched012.png">
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/img/grayscale.png">
+        <entry file="file://$PROJECT_DIR$/img/C3_1.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/img/C3_2.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/img/C3_0.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/img/C3_Stitched01.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/transform/transform.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="77" column="65" lean-forward="true" selection-start-line="77" selection-start-column="65" selection-end-line="77" selection-end-column="65" />
+              <folding>
+                <element signature="e#19#63#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/img/C3_2Grayscale.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/img/C3_1Grayscale.png">
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/filter/filter.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="86" column="55" selection-start-line="86" selection-start-column="55" selection-end-line="86" selection-end-column="55" />
-              <folding>
-                <element signature="e#75#255#0" expanded="true" />
-                <element signature="e#2640#2853#0" />
-                <element signature="e#2902#3109#0" />
-                <element signature="e#3428#3626#0" />
-                <element signature="e#3962#4160#0" />
-                <element signature="e#4494#4677#0" />
-                <element signature="e#4787#5670#0" />
-                <element signature="e#5781#6053#0" />
-                <element signature="e#6152#6867#0" />
-                <element signature="e#6924#7370#0" />
-                <element signature="e#7428#8171#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/img/boxBlur.png">
+        <entry file="file://$PROJECT_DIR$/img/C3_0Grayscale.png">
           <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/convolution/convolution.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
-              <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/convolution/kernel_test.go">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -144,18 +164,18 @@
         <option value="$PROJECT_DIR$/clone/clone.go" />
         <option value="$PROJECT_DIR$/convolution/kernel.go" />
         <option value="$PROJECT_DIR$/io/io.go" />
-        <option value="$PROJECT_DIR$/noise/noise.go" />
         <option value="$PROJECT_DIR$/utils/utils_test.go" />
-        <option value="$PROJECT_DIR$/utils/utils.go" />
-        <option value="$PROJECT_DIR$/transform/transform.go" />
         <option value="$PROJECT_DIR$/convolution/convolution.go" />
-        <option value="$PROJECT_DIR$/main.go" />
+        <option value="$PROJECT_DIR$/noise/noise.go" />
         <option value="$PROJECT_DIR$/filter/filter.go" />
+        <option value="$PROJECT_DIR$/utils/utils.go" />
+        <option value="$PROJECT_DIR$/main.go" />
+        <option value="$PROJECT_DIR$/transform/transform.go" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="width" value="840" />
+    <option name="width" value="941" />
     <option name="height" value="1050" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -400,16 +420,16 @@
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.12515263" />
+      <window_info id="Favorites" order="0" sideWeight="0.50158733" side_tool="true" weight="0.22803114" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.4984127" visible="true" weight="0.12515263" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.24969475" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5012531" side_tool="true" weight="0.3368984" />
+      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50278085" side_tool="true" weight="0.3262032" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.32941177" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.3354232" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32941177" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.49874687" visible="true" weight="0.32706374" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49721915" visible="true" weight="0.31870428" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.3604278" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -425,109 +445,119 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/img/histogramImage/gammaCorrectHistogram.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/histogramImage/fixedSharpenHistogram.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/histogramImage/fixedEdgeDetectionHistogram.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/histogramImage/grayscaleWithSpikeNoiseHistogram.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/histogramImage/histogramEqualizationHistogram.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/histogramImage/smoothedGrayscaleWithSpikeNoiseByMedianHistogram.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/histogramImage/halftoningWithDitheringMethodHistogram.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/histogramImage/halftoningWithErrorDiffusionMethodHistogram.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/halftoningWithDitheringMethod.png">
+    <entry file="file://$PROJECT_DIR$/img/grayscale.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/img/halftoningWithErrorDiffusionMethod.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/img/original.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/binaryNoise.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/bilateralFilter3.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/bilateralFilter2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/bilateralFilter.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/fixedSharpen.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/fixEdgeDetection.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/histogramImage/keystoneEffectSampleOriginalGrayscaleHistogram.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file:///usr/local/Cellar/go/1.11.2/libexec/src/math/unsafe.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/go/1.11.2/libexec/src/math/bits.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/utils_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="263" selection-start-line="263" selection-end-line="263" />
-          <folding>
-            <element signature="n#!!block;n#TestQuickSortGray#0" />
-            <element signature="n#!!block;n#TestRGBASlicesEqual#0" />
-            <element signature="n#!!block;n#TestGrayImageEqual#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/erode.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/img/edgeDetection.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/grayscaleWithSpikeNoise.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/noise/noise.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/halftoningWithDitheringMethod.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/halftoningWithDitheringMethodScrew.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/img/gammaCorrect.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/img/histogramImage/grayscalHistogram.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/histogramImage/halftoningWithDitheringMethodBayerHistogram.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/histogramImage/halftoningWithDitheringMethodHalfToneHistogram.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/halftoningWithDitheringMethodHalfTone.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/halftoningWithDitheringMethodBayer.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/histogramImage/uniformNoiseHistogram.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/histogramImage/spikeNoiseHistogram.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/histogramImage/smoothedGrayscaleWithSpikeNoiseByMedianHistogram.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/histogramImage/gaussianNoiseHistogram.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/img/histogramEqualization.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file:///usr/local/Cellar/go/1.11.2/libexec/src/runtime/panic.go">
+    <entry file="file://$PROJECT_DIR$/img/histogramImage/histogramEqualizationHistogram.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/erode.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/filter/filter.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10140">
-          <caret line="680" selection-start-line="680" selection-end-line="680" />
+        <state relative-caret-position="194">
+          <caret line="292" column="5" selection-start-line="292" selection-start-column="5" selection-end-line="292" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/img/uniformNoise.png">
+    <entry file="file://$PROJECT_DIR$/img/histogramImage/gammaCorrect__Histogram.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/img/smoothedGrayscaleWithSpikeNoiseByMedian.png">
+    <entry file="file://$PROJECT_DIR$/img/histogramImage/cumulativeHistogramEqualizationHistogram.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/gammaCorrect_.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/gammaCorrect__histogramEqualization.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/gammaCorrect__.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/gammaCorrect_histogramEqualization.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/histogramImage/gammaCorrect__cumulativeHistogramEqualizationHistogram.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/histogramImage/gammaCorrect_cumulativeHistogramEqualizationHistogram.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/histogramImage/gammaCorrect_Histogram.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/histogramImage/gammaCorrect_histogramEqualizationHistogram.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/keystoneEffect.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/keystoneEffect_C2_0_grayscale.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/img/keystoneEffectSample.png">
@@ -536,115 +566,76 @@
     <entry file="file://$PROJECT_DIR$/img/keystoneEffectSampleOriginalGrayscale.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/img/keystoneEffect.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/C2_0_original.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/C2_1_grayscale.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/C2_0_grayscale.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/keystoneEffect_C2_1_grayscale.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/keystoneEffect_C2_0_grayscale.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/C2_1_original.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/C2_result.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/dilate.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/filter/filter_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1252" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/transform/transform.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="45" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
-          <folding>
-            <element signature="e#19#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/convolution/convolution.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/convolution/kernel.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="74" selection-start-line="7" selection-end-line="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/convolution/kernel_test.go">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/utils.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2250">
-          <caret line="193" column="8" selection-start-line="193" selection-start-column="8" selection-end-line="196" selection-end-column="34" />
+        <state relative-caret-position="70">
+          <caret line="154" column="24" selection-start-line="154" selection-start-column="24" selection-end-line="154" selection-end-column="24" />
           <folding>
-            <element signature="n#!!block;n#SortGray#0" />
             <element signature="n#!!block;n#partitionGraySlice#0" />
             <element signature="n#!!block;n#RGBAToString#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parallel/parallel.go">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/grayscale.png">
+    <entry file="file://$PROJECT_DIR$/img/dilate.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/img/boxBlur.png">
+    <entry file="file://$PROJECT_DIR$/histogram/histogram.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/C3_Stitched_.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/C3_Stitched.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/C3_Stitched01.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/C3_0.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/C3_1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/C3_2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/C3_Stitched012.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="65" column="101" selection-start-line="65" selection-start-column="101" selection-end-line="65" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/fixedDirectionBlur.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/filter/filter.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="86" column="55" selection-start-line="86" selection-start-column="55" selection-end-line="86" selection-end-column="55" />
+        <state relative-caret-position="410">
+          <caret line="791" column="39" lean-forward="true" selection-start-line="791" selection-start-column="39" selection-end-line="791" selection-end-column="39" />
           <folding>
-            <element signature="e#75#255#0" expanded="true" />
-            <element signature="e#2640#2853#0" />
-            <element signature="e#2902#3109#0" />
-            <element signature="e#3428#3626#0" />
-            <element signature="e#3962#4160#0" />
-            <element signature="e#4494#4677#0" />
-            <element signature="e#4787#5670#0" />
-            <element signature="e#5781#6053#0" />
-            <element signature="e#6152#6867#0" />
-            <element signature="e#6924#7370#0" />
-            <element signature="e#7428#8171#0" />
+            <element signature="e#14#180#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/transform/transform.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="77" column="65" lean-forward="true" selection-start-line="77" selection-start-column="65" selection-end-line="77" selection-end-column="65" />
+          <folding>
+            <element signature="e#19#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/C3_2Grayscale.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/C3_1Grayscale.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/C3_0Grayscale.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
 </project>

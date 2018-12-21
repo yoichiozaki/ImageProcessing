@@ -151,11 +151,8 @@ func Clamp(value, min, max float64) float64 {
 	return value
 }
 
-// TODO: 方程式の解き方を検証する必要がある
 func GaussElimination(equations *[][]float64) {
-
 	N := len(*equations)
-
 	for k := 0; k < N; k++ {
 		max := 0.0
 		s := k
@@ -185,7 +182,6 @@ func GaussElimination(equations *[][]float64) {
 			}
 		}
 	}
-
 }
 
 func SampleGaussElimination() {

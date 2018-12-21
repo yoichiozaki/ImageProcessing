@@ -28,7 +28,7 @@ func init() {
 		return uint8(rand.NormFloat64()*32.0 + 128.0)
 	}
 	Spike =func() uint8 {
-		if i := rand.Intn(50); i == 7 {
+		if i := rand.Intn(10); i == 7 {
 			return 0xFF * uint8(rand.Intn(2))
 		} else {
 			return 0

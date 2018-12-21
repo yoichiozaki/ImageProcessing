@@ -67,30 +67,24 @@ func BoxBlur(img image.Image, radius int) *image.Gray {
 	return convolution.Convolve(img, kernel.GetNormalizedMatrix(), &convolution.Options{Wrap: false})
 }
 
-func FixedDirectionBlur(img image.Image) *image.Gray {
+func FixedDirectionBlur(img image.Image, size int) *image.Gray {
+	matrix := make([]float64, size*size)
+	for i := 0; i < size; i++ {
+		for j := 0; j < size; j++ {
+			if i == j {
+				matrix[j*size+i] = 1
+			} else {
+				matrix[j*size+i] = 0
+			}
+		}
+	}
+	fmt.Println(matrix)
 	kernel := convolution.Kernel{
-		Matrix: []float64{
-			1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-			0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-			0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-			0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-			0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-			0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-			0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0,
-			0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0,
-			0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
-			0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0,
-			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0,
-			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0,
-			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0,
-			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
-			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
-		},
-		Width:  15,
-		Height: 15,
+		Matrix: matrix,
+		Width:  size,
+		Height: size,
 	}
 	return convolution.Convolve(img, kernel.GetNormalizedMatrix(), &convolution.Options{Wrap: false})
-
 }
 
 func GaussianBlur(img image.Image, radius int) *image.Gray {
@@ -129,9 +123,9 @@ func EdgeDetection(img image.Image, radius int) *image.Gray {
 func FixedEdgeDetection(img image.Image) *image.Gray {
 	kernel := convolution.Kernel{
 		Matrix: []float64{
-			0, 1, 0,
-			1, -4, 1,
-			0, 1, 0,
+			0, -1, 0,
+			-1, 4, -1,
+			0, -1, 0,
 		},
 		Width:  3,
 		Height: 3,
@@ -312,7 +306,6 @@ func HistogramEqualization(img image.Image) *image.Gray {
 	max := bins[len(bins)-1].Y
 	cumulated := hist.Y.Cumulate()
 	fn := func(original uint8) uint8 {
-		// log.Print(int(max) * cumulated.Bins[original]/(w*h))
 		return uint8(int(max) * cumulated.Bins[original]/(w*h))
 	}
 	parallel.Line(h, func(start, end int) {
@@ -326,18 +319,32 @@ func HistogramEqualization(img image.Image) *image.Gray {
 	return dst
 }
 
-func HalftoningWithDitheringMethod(img image.Image) *image.Gray {
-	Bayer := []uint{
+var (
+	Bayer = []uint{
 		0, 8, 2, 10,
 		12, 4, 14, 6,
 		3, 11, 1, 9,
 		15, 7, 3, 5,
 	}
+	HalfTone = []uint{
+		10, 4, 6, 8,
+		12, 0, 2, 14,
+		7, 9, 11, 5,
+		3, 15, 13, 1,
+	}
+	Screw = []uint{
+		13, 7, 6, 12,
+		8, 1, 0, 5,
+		9, 2, 3, 4,
+		14, 10, 11, 15,
+	}
+)
+func HalftoningWithDitheringMethod(img image.Image, pattern []uint) *image.Gray {
 	src := clone.AsGray(img)
 	bounds := src.Bounds()
 	dst := image.NewGray(bounds)
 	fn := func(x, y int) uint8 {
-		if uint8(Bayer[(y%4)*4 + (x%4)]*16 + 8) <= src.Pix[y*dst.Stride + x] {
+		if uint8(pattern[(y%4)*4 + (x%4)]*16 + 8) <= src.Pix[y*dst.Stride + x] {
 			return 255
 		} else {
 			return 0
@@ -351,15 +358,6 @@ func HalftoningWithDitheringMethod(img image.Image) *image.Gray {
 			}
 		}
 	})
-	// for y := 0; y < bounds.Dy(); y++ {
-	// 	for x := 0; x < bounds.Dx(); x++ {
-	// 		if uint8(Bayer[(y%4)*4 + (x%4)]*16 + 8) <= src.GrayAt(x, y).Y {
-	// 			dst.Pix[y*dst.Stride + x] = 255
-	// 		} else {
-	// 			dst.Pix[y*dst.Stride + x] = 0
-	// 		}
-	// 	}
-	// }
 	return dst
 }
 
@@ -367,41 +365,6 @@ func HalftoningWithErrorDiffusionMethod(img image.Image) *image.Gray {
 	src := clone.AsGray(img)
 	bounds := src.Bounds()
 	dst := clone.AsGray(img)
-
-	// 並行処理すると切れ目ができちゃう
-	// parallel.Line(bounds.Dy(), func(start, end int) {
-	// 	var e uint8
-	// 	for y := start; y < end; y++ {
-	// 		for x := 0; x < bounds.Dx(); x++ {
-	// 			dstPos := y*dst.Stride + x
-	// 			f := dst.GrayAt(x, y).Y
-	// 			if f < 127 {
-	// 				dst.Pix[dstPos] = 255
-	// 				e = f - 255
-	// 			} else {
-	// 				dst.Pix[dstPos] = 0
-	// 				e = f
-	// 			}
-	// 			if x != dst.Bounds().Dx()-1 {
-	// 				dst.Pix[dstPos+1] += uint8((5.0/16)*float64(e))
-	// 				// dst.Pix[dstPos+1] += (7/16)*e
-	// 			}
-	// 			if x != 0 && y != dst.Bounds().Dy()-1 {
-	// 				dst.Pix[(y+1)*dst.Stride + x-1] += uint8((3.0/16)*float64(e))
-	// 				// dst.Pix[(y+1)*dst.Stride + x-1] += (3/16)*e
-	// 			}
-	// 			if y != dst.Bounds().Dy()-1 {
-	// 				dst.Pix[(y+1)*dst.Stride + x] += uint8((5.0/16)*float64(e))
-	// 				// dst.Pix[(y+1)*dst.Stride + x] += (5/16)*e
-	// 			}
-	// 			if x != dst.Bounds().Dx()-1 && y != dst.Bounds().Dy()-1 {
-	// 				dst.Pix[(y+1)*dst.Stride + x+1] += uint8((3.0/16)*float64(e))
-	// 				// dst.Pix[(y+1)*dst.Stride + x+1] += (1/16)*e
-	// 			}
-	// 		}
-	// 	}
-	// })
-
 	var e uint8
 	for y := 0; y < bounds.Dy(); y++ {
 		for x := 0; x < bounds.Dx(); x++ {
@@ -416,19 +379,15 @@ func HalftoningWithErrorDiffusionMethod(img image.Image) *image.Gray {
 			}
 			if x != dst.Bounds().Dx()-1 {
 				dst.Pix[dstPos+1] += uint8((5.0/16)*float64(e))
-				// dst.Pix[dstPos+1] += (7/16)*e
 			}
 			if x != 0 && y != dst.Bounds().Dy()-1 {
 				dst.Pix[(y+1)*dst.Stride + x-1] += uint8((3.0/16)*float64(e))
-				// dst.Pix[(y+1)*dst.Stride + x-1] += (3/16)*e
 			}
 			if y != dst.Bounds().Dy()-1 {
 				dst.Pix[(y+1)*dst.Stride + x] += uint8((5.0/16)*float64(e))
-				// dst.Pix[(y+1)*dst.Stride + x] += (5/16)*e
 			}
 			if x != dst.Bounds().Dx()-1 && y != dst.Bounds().Dy()-1 {
 				dst.Pix[(y+1)*dst.Stride + x+1] += uint8((3.0/16)*float64(e))
-				// dst.Pix[(y+1)*dst.Stride + x+1] += (1/16)*e
 			}
 		}
 	}
